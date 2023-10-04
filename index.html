@@ -202,12 +202,22 @@
                             </label>
                         </div>
                     </fieldset>
-                    <label for="GPU">
-                        GPU
-                        <select name="GPU" id="GPU">
-                            <option value="NGTX1660S">NVIDIA GeForce GTX 1660 Super</option>
-                        </select>
-                    </label>
+                    <fieldset>
+                        <legend>GPU</legend>
+                        <label for="GPUManufactuer">
+                            Manufactuer
+                            <select name="GPUManufactuer" id="GPUManufactuer">
+                                <option value="NVIDIA">NVIDIA</option>
+                                <option value="AMD">AMD</option>
+                            </select>
+                        </label>
+                        <label for="GPUSeries">
+                            Series
+                            <select name="GPUSeries" id="GPUSeries">
+                                <option value="GeForce">GeForce</option>
+                            </select>
+                        </label>
+                    </fieldset>
                     <label for="RAM">
                         RAM
                         <div>
@@ -328,6 +338,7 @@
                         </label>
                     </fieldset>
                 </fieldset>
+                <!-- TODO: Add Comments -->
                 <div class="buttons">
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset">
