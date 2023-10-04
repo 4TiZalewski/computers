@@ -114,33 +114,32 @@
                             GB
                         </div>
                     </label>
-                    <label for="storage">
-                        <fieldset>
-                            <legend>Storage</legend>
-                            <label for="storageType">
-                                Type
-                                <select name="storageType" id="storageType">
-                                    <option value="M2">M2</option>
-                                    <option value="SSD">SSD</option>
-                                    <option value="HDD">HDD</option>
+                    <!-- TODO: Multiple storage options? -->
+                    <fieldset>
+                        <legend>Storage</legend>
+                        <label for="storageType">
+                            Type
+                            <select name="storageType" id="storageType">
+                                <option value="M2">M2</option>
+                                <option value="SSD">SSD</option>
+                                <option value="HDD">HDD</option>
+                            </select>
+                        </label>
+                        <label for="storageCapacity">
+                            Capacity
+                            <div>
+                                <input type="number" name="storageCapacity" id="storageCapacity" min="1" max="999">
+                                <select name="storageCapacityType" id="storageCapacityType">
+                                    <option value="TB">TB</option>
+                                    <option value="GB">GB</option>
                                 </select>
-                            </label>
-                            <label for="storageCapacity">
-                                Capacity
-                                <div>
-                                    <input type="number" name="storageCapacity" id="storageCapacity" min="1" max="999">
-                                    <select name="storageCapacityType" id="storageCapacityType">
-                                        <option value="TB">TB</option>
-                                        <option value="GB">GB</option>
-                                    </select>
-                                </div>
-                            </label>
-                            <label for="storageQuantity">
-                                Quantiy
-                                <input type="number" name="storageQuantity" id="storageQuantity" min="1" max="50" value="1">
-                            </label>
-                        </fieldset>
-                    </label>
+                            </div>
+                        </label>
+                        <label for="storageQuantity">
+                            Quantiy
+                            <input type="number" name="storageQuantity" id="storageQuantity" min="1" max="50" value="1">
+                        </label>
+                    </fieldset>
                 </fieldset>
                 <div class="buttons">
                     <input type="submit" value="Submit">
