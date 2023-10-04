@@ -20,7 +20,23 @@
         }
 
         fieldset {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 0.5rem;
+        }
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2rem;
+        }
+
+        label:last-child {
+            margin-bottom: 0;
+        }
+        
+        label > input {
+            margin-left: 0.5rem;
         }
     </style>
 </head>
@@ -34,9 +50,19 @@
                         Name
                         <input type="text" name="name" id="name" required>
                     </label>
+                    <label for="surname">
+                        Surname
+                        <input type="text" name="surname" id="surname" required>
+                    </label>
+                    <label for="email">
+                        E-mail
+                        <input type="email" name="email" id="email" required>
+                    </label>
                 </fieldset>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+                <div class="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
             </fieldset>
         </form>
     </div>
