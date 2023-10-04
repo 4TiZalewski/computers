@@ -42,6 +42,15 @@
         label > div {
             margin-left: 0.5rem;
         }
+
+        .intel {
+            /* display: none; */
+        }
+
+        .amd {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -145,6 +154,50 @@
                                     <option value="KS">KS</option>
                                     <option value="K">K</option>
                                     <option value="F">F</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="amd">
+                            <label for="CPUSeries">
+                                Series
+                                <select name="CPUSeries" id="CPUSeries">
+                                    <option value="Ryzen">Ryzen</option>
+                                </select>
+                            </label>
+                            <label for="CPUClass">
+                                Class
+                                <select name="CPUClass" id="CPUClass">
+                                    <option value="9">9</option>
+                                    <option value="7">7</option>
+                                    <option value="5">5</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </label>
+                            <label for="CPUGeneration">
+                                Generation
+                                <select name="CPUGeneration" id="CPUGeneration">
+                                    <option value="7">7th</option>
+                                    <option value="6">6th</option>
+                                    <option value="5">5th</option>
+                                    <option value="4">4th</option>
+                                    <option value="3">3rd</option>
+                                    <option value="2" disabled>2nd</option>
+                                    <option value="1" disabled>1st</option>
+                                </select>
+                            </label>
+                            <label for="CPUPerformance">
+                                Performance
+                                <select name="CPUPerformance" id="CPUPerformance">
+                                    <option value="600">600</option>
+                                    <option value="500">500</option>
+                                </select>
+                            </label>
+                            <label for="CPUType">
+                                Type
+                                <select name="CPUType" id="CPUType">
+                                    <option value="HX">HX</option>
+                                    <option value="H">H</option>
+                                    <option value="U">U</option>
                                 </select>
                             </label>
                         </div>
