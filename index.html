@@ -12,7 +12,8 @@
         }
 
         .container {
-            height: 100vh;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -28,6 +29,7 @@
         label {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 0.2rem;
         }
 
@@ -174,6 +176,32 @@
                             <label for="USB-C">
                                 USB-C
                                 <input type="checkbox" name="motherboardUSBC" id="USB-C" value="1">
+                            </label>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Case</legend>
+                        <label for="caseColor">
+                            Color
+                            <input type="color" name="caseColor" id="caseColor">
+                        </label>
+                        <fieldset>
+                            <legend>I/O</legend>
+                            <label for="USB3">
+                                USB 3.0
+                                <input type="checkbox" name="USB3" id="USB3">
+                            </label>
+                            <label for="USBC">
+                                USB-C
+                                <input type="checkbox" name="USBC" id="USBC">
+                            </label>
+                            <label for="jack3mm">
+                                Jack 3.0mm
+                                <input type="checkbox" name="jack3mm" id="jack3mm">
+                            </label>
+                            <label for="dvd">
+                                DVD
+                                <input type="checkbox" name="dvd" id="dvd">
                             </label>
                         </fieldset>
                     </fieldset>
