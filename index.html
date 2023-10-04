@@ -88,21 +88,73 @@
                 </fieldset>
                 <fieldset>
                     <legend>Computer</legend>
-                    <label for="CPU">
-                        CPU
-                        <select name="CPU" id="CPU">
-                            <option value="Ii9-13600KS">Intel Core i9-13600KS</option>
-                            <option value="Ii9-13600K">Intel Core i9-13600K</option>
-                            <option value="Ii9-12600KS">Intel Core i9-12600KS</option>
-                            <option value="Ii9-12600K">Intel Core i9-12600K</option>
-                            <option value="Ii9-11600KS">Intel Core i9-11600KS</option>
-                            <option value="Ii9-11600K">Intel Core i9-11600K</option>
-                            <option value="Ii9-10600KS">Intel Core i9-10600KS</option>
-                            <option value="Ii9-10600K">Intel Core i9-10600K</option>
-                            <option value="Ii9-9600KS">Intel Core i9-9600KS</option>
-                            <option value="Ii9-9600K">Intel Core i9-9600K</option>
-                        </select>
-                    </label>
+                    <fieldset>
+                        <legend>CPU</legend>
+                        <label for="CPUManufactuer">
+                            Manufactuer
+                            <select name="CPUManufactuer" id="CPUManufactuer">
+                                <option value="Intel">Intel</option>
+                                <!-- temporary disabled until JS is not added -->
+                                <option value="AMD" disabled>AMD</option>
+                            </select>
+                        </label>
+                        <div class="intel">
+                            <label for="CPUSeries">
+                                Series
+                                <select name="CPUSeries" id="CPUSeries">
+                                    <option value="Core">Core</option>
+                                    <!-- temporary disabled until JS is not added -->
+                                    <option value="Xeon" disabled>Xeon</option>
+                                </select>
+                            </label>
+                            <div class="core">
+                                <label for="CPUClass">
+                                    Class
+                                    <select name="CPUClass" id="CPUClass">
+                                        <option value="i9">i9</option>
+                                        <option value="i7">i7</option>
+                                        <option value="i5">i5</option>
+                                        <option value="i3">i3</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <label for="CPUGeneration">
+                                Generation
+                                <select name="CPUGeneration" id="CPUGeneration">
+                                    <option value="13">13th</option>
+                                    <option value="12">12th</option>
+                                    <option value="11">11th</option>
+                                    <option value="10">10th</option>
+                                    <option value="9">9th</option>
+                                    <option value="8">8th</option>
+                                    <option value="7">7th</option>
+                                    <option value="6" disabled>6th</option>
+                                    <option value="5" disabled>5th</option>
+                                    <option value="4" disabled>4th</option>
+                                    <option value="3" disabled>3rd</option>
+                                    <option value="2" disabled>2nd</option>
+                                    <option value="1" disabled>1st</option>
+                                </select>
+                            </label>
+                            <div class="core">
+                                <label for="CPUPerformance">
+                                    Performance
+                                    <select name="CPUPerformance" id="CPUPerformance">
+                                        <option value="600">600</option>
+                                        <option value="400">400</option>
+                                    </select>
+                                </label>
+                                <label for="CPUType">
+                                    Type
+                                    <select name="CPUType" id="CPUType">
+                                        <option value="KS">KS</option>
+                                        <option value="K">K</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
                     <label for="GPU">
                         GPU
                         <select name="GPU" id="GPU">
