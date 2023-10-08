@@ -109,22 +109,14 @@
               <option value="97950X">AMD Ryzen 9 7950X</option>
             </select>
           </label>
-          <fieldset>
-            <legend>GPU</legend>
-            <label for="GPUManufactuer">
-              Manufactuer
-              <select name="GPUManufactuer" id="GPUManufactuer">
-                <option value="NVIDIA">NVIDIA</option>
-                <option value="AMD">AMD</option>
-              </select>
-            </label>
-            <label for="GPUSeries">
-              Series
-              <select name="GPUSeries" id="GPUSeries">
-                <option value="GeForce">GeForce</option>
-              </select>
-            </label>
-          </fieldset>
+          <label for="GPU">
+            GPU
+            <select>
+              <option value="GTX1660SUPER">NVIDIA GeForce GTX 1660 Super</option>
+              <option value="GTX1660Ti">NVIDIA GeForce GTX 1660 Ti</option>
+              <option value="RX6600">AMD Radeon RX 6600</option>
+            </select>
+          </label>
           <label for="RAM">
             RAM
             <div>
@@ -132,7 +124,6 @@
               GB
             </div>
           </label>
-          <!-- TODO: Multiple storage options? -->
           <fieldset>
             <legend>Storage</legend>
             <label for="storageType">
@@ -245,7 +236,10 @@
             </label>
           </fieldset>
         </fieldset>
-        <!-- TODO: Add Comments -->
+        <fieldset>
+          <legend>Additional Info</legend>
+          <textarea name="addInfo" rows="5" cols="5"></textarea>
+        </fieldset>
         <div class="buttons">
           <input type="submit" value="Submit">
           <input type="reset" value="Reset">
