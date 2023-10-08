@@ -1,350 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+    }
 
-        .container {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    .container {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-        fieldset {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 0.5rem;
-        }
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
 
-        label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.2rem;
-        }
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.2rem;
+    }
 
-        label:last-child {
-            margin-bottom: 0;
-        }
-        
-        label > input,
-        label > select,
-        label > div {
-            margin-left: 0.5rem;
-        }
+    label:last-child {
+      margin-bottom: 0;
+    }
 
-        .intel {
-            /* display: none; */
-        }
-
-        .amd {
-            display: none;
-        }
-
-    </style>
+    label>input,
+    label>select,
+    label>div {
+      margin-left: 0.5rem;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <form action="#" method="GET">
+  <div class="container">
+    <form action="#" method="GET">
+      <fieldset>
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label for="name">
+            Name
+            <input type="text" name="name" id="name" required>
+          </label>
+          <label for="surname">
+            Surname
+            <input type="text" name="surname" id="surname" required>
+          </label>
+          <label for="email">
+            E-mail
+            <input type="email" name="email" id="email" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Delivery Info</legend>
+          <label for="city">
+            City
+            <input type="text" name="city" id="city" required>
+          </label>
+          <label for="postalCode">
+            Postal Code
+            <input type="text" name="postalCode" id="postalCode" required>
+          </label>
+          <label for="street">
+            Street
+            <input type="text" name="street" id="street" required>
+          </label>
+          <label for="nr1">
+            Building Nr
+            <input type="text" name="nr1" id="nr1" required>
+          </label>
+          <label for="nr2">
+            Apartament Nr
+            <input type="text" name="nr2" id="nr2">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Computer</legend>
+          <label for="CPU">
+            CPU
+            <select>
+              <option value="i913900K">Intel Core i9-13900K</option>
+              <option value="i913900KF">Intel Core i9-13900KF</option>
+              <option value="i913900">Intel Core i9-13900</option>
+              <option value="i913900F">Intel Core i9-13900F</option>
+              <option value="i913900T">Intel Core i9-13900T</option>
+              <option value="i713700K">Intel Core i7-13700K</option>
+              <option value="i713700KF">Intel Core i7-13700KF</option>
+              <option value="i713700">Intel Core i7-13700</option>
+              <option value="i713700F">Intel Core i7-13700F</option>
+              <option value="i713700T">Intel Core i7-13700T</option>
+              <option value="57600X">AMD Ryzen 5 7600X</option>
+              <option value="77700X">AMD Ryzen 7 7700X</option>
+              <option value="97900X">AMD Ryzen 9 7900X</option>
+              <option value="97950X">AMD Ryzen 9 7950X</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>GPU</legend>
+            <label for="GPUManufactuer">
+              Manufactuer
+              <select name="GPUManufactuer" id="GPUManufactuer">
+                <option value="NVIDIA">NVIDIA</option>
+                <option value="AMD">AMD</option>
+              </select>
+            </label>
+            <label for="GPUSeries">
+              Series
+              <select name="GPUSeries" id="GPUSeries">
+                <option value="GeForce">GeForce</option>
+              </select>
+            </label>
+          </fieldset>
+          <label for="RAM">
+            RAM
+            <div>
+              <input type="number" name="RAMCapacity" id="RAMCapacity" min="2" max="256">
+              GB
+            </div>
+          </label>
+          <!-- TODO: Multiple storage options? -->
+          <fieldset>
+            <legend>Storage</legend>
+            <label for="storageType">
+              Type
+              <select name="storageType" id="storageType">
+                <option value="M2">M2</option>
+                <option value="SSD">SSD</option>
+                <option value="HDD">HDD</option>
+              </select>
+            </label>
+            <label for="storageCapacity">
+              Capacity
+              <div>
+                <input type="number" name="storageCapacity" id="storageCapacity" min="1" max="999">
+                <select name="storageCapacityType" id="storageCapacityType">
+                  <option value="TB">TB</option>
+                  <option value="GB">GB</option>
+                </select>
+              </div>
+            </label>
+            <label for="storageQuantity">
+              Quantiy
+              <input type="number" name="storageQuantity" id="storageQuantity" min="1" max="50" value="1">
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Motherboard</legend>
+            <label for="motherboardManufactuer">
+              Manufactuer
+              <select name="motherboardManufactuer" id="motherboardManufactuer">
+                <option value="Asus">Asus</option>
+                <option value="MSI">MSI</option>
+              </select>
+            </label>
             <fieldset>
-                <fieldset>
-                    <legend>Personal Info</legend>
-                    <label for="name">
-                        Name
-                        <input type="text" name="name" id="name" required>
-                    </label>
-                    <label for="surname">
-                        Surname
-                        <input type="text" name="surname" id="surname" required>
-                    </label>
-                    <label for="email">
-                        E-mail
-                        <input type="email" name="email" id="email" required>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>Delivery Info</legend>
-                    <label for="city">
-                        City
-                        <input type="text" name="city" id="city" required>
-                    </label>
-                    <label for="postalCode">
-                        Postal Code
-                        <input type="text" name="postalCode" id="postalCode" required>
-                    </label>
-                    <label for="street">
-                        Street
-                        <input type="text" name="street" id="street" required>
-                    </label>
-                    <label for="nr1">
-                        Building Nr
-                        <input type="text" name="nr1" id="nr1" required>
-                    </label>
-                    <label for="nr2">
-                        Apartament Nr
-                        <input type="text" name="nr2" id="nr2">
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>Computer</legend>
-                    <fieldset>
-                        <legend>CPU</legend>
-                        <label for="CPUManufactuer">
-                            Manufactuer
-                            <select name="CPUManufactuer" id="CPUManufactuer">
-                                <option value="Intel">Intel</option>
-                                <!-- temporary disabled until JS is not added -->
-                                <option value="AMD" disabled>AMD</option>
-                            </select>
-                        </label>
-                        <div class="intel">
-                            <label for="CPUSeries">
-                                Series
-                                <select name="CPUSeries" id="CPUSeries">
-                                    <option value="Core">Core</option>
-                                </select>
-                            </label>
-                            <label for="CPUClass">
-                                Class
-                                <select name="CPUClass" id="CPUClass">
-                                    <option value="i9">i9</option>
-                                    <option value="i7">i7</option>
-                                    <option value="i5">i5</option>
-                                    <option value="i3">i3</option>
-                                </select>
-                            </label>
-                            <label for="CPUGeneration">
-                                Generation
-                                <select name="CPUGeneration" id="CPUGeneration">
-                                    <option value="13">13th</option>
-                                    <option value="12">12th</option>
-                                    <option value="11">11th</option>
-                                    <option value="10">10th</option>
-                                    <option value="9">9th</option>
-                                    <option value="8">8th</option>
-                                    <option value="7">7th</option>
-                                    <option value="6" disabled>6th</option>
-                                    <option value="5" disabled>5th</option>
-                                    <option value="4" disabled>4th</option>
-                                    <option value="3" disabled>3rd</option>
-                                    <option value="2" disabled>2nd</option>
-                                    <option value="1" disabled>1st</option>
-                                </select>
-                            </label>
-                            <label for="CPUPerformance">
-                                Performance
-                                <select name="CPUPerformance" id="CPUPerformance">
-                                    <option value="600">600</option>
-                                    <option value="400">400</option>
-                                </select>
-                            </label>
-                            <label for="CPUType">
-                                Type
-                                <select name="CPUType" id="CPUType">
-                                    <option value="KS">KS</option>
-                                    <option value="K">K</option>
-                                    <option value="F">F</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div class="amd">
-                            <label for="CPUSeries">
-                                Series
-                                <select name="CPUSeries" id="CPUSeries">
-                                    <option value="Ryzen">Ryzen</option>
-                                </select>
-                            </label>
-                            <label for="CPUClass">
-                                Class
-                                <select name="CPUClass" id="CPUClass">
-                                    <option value="9">9</option>
-                                    <option value="7">7</option>
-                                    <option value="5">5</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </label>
-                            <label for="CPUGeneration">
-                                Generation
-                                <select name="CPUGeneration" id="CPUGeneration">
-                                    <option value="7">7th</option>
-                                    <option value="6">6th</option>
-                                    <option value="5">5th</option>
-                                    <option value="4">4th</option>
-                                    <option value="3">3rd</option>
-                                    <option value="2" disabled>2nd</option>
-                                    <option value="1" disabled>1st</option>
-                                </select>
-                            </label>
-                            <label for="CPUPerformance">
-                                Performance
-                                <select name="CPUPerformance" id="CPUPerformance">
-                                    <option value="600">600</option>
-                                    <option value="500">500</option>
-                                </select>
-                            </label>
-                            <label for="CPUType">
-                                Type
-                                <select name="CPUType" id="CPUType">
-                                    <option value="HX">HX</option>
-                                    <option value="H">H</option>
-                                    <option value="U">U</option>
-                                </select>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>GPU</legend>
-                        <label for="GPUManufactuer">
-                            Manufactuer
-                            <select name="GPUManufactuer" id="GPUManufactuer">
-                                <option value="NVIDIA">NVIDIA</option>
-                                <option value="AMD">AMD</option>
-                            </select>
-                        </label>
-                        <label for="GPUSeries">
-                            Series
-                            <select name="GPUSeries" id="GPUSeries">
-                                <option value="GeForce">GeForce</option>
-                            </select>
-                        </label>
-                    </fieldset>
-                    <label for="RAM">
-                        RAM
-                        <div>
-                            <input type="number" name="RAMCapacity" id="RAMCapacity" min="2" max="256">
-                            GB
-                        </div>
-                    </label>
-                    <!-- TODO: Multiple storage options? -->
-                    <fieldset>
-                        <legend>Storage</legend>
-                        <label for="storageType">
-                            Type
-                            <select name="storageType" id="storageType">
-                                <option value="M2">M2</option>
-                                <option value="SSD">SSD</option>
-                                <option value="HDD">HDD</option>
-                            </select>
-                        </label>
-                        <label for="storageCapacity">
-                            Capacity
-                            <div>
-                                <input type="number" name="storageCapacity" id="storageCapacity" min="1" max="999">
-                                <select name="storageCapacityType" id="storageCapacityType">
-                                    <option value="TB">TB</option>
-                                    <option value="GB">GB</option>
-                                </select>
-                            </div>
-                        </label>
-                        <label for="storageQuantity">
-                            Quantiy
-                            <input type="number" name="storageQuantity" id="storageQuantity" min="1" max="50" value="1">
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Motherboard</legend>
-                        <label for="motherboardManufactuer">
-                            Manufactuer
-                            <select name="motherboardManufactuer" id="motherboardManufactuer">
-                                <option value="Asus">Asus</option>
-                                <option value="MSI">MSI</option>
-                            </select>
-                        </label>
-                        <fieldset>
-                            <legend>Features</legend>
-                            <label for="Wi-Fi">
-                                Wi-Fi
-                                <input type="checkbox" name="motherboardWifi" id="Wi-Fi" value="1">
-                            </label>
-                            <label for="Bluetooth">
-                                Bluetooth
-                                <input type="checkbox" name="motherboardBluetooth" id="Bluetooth" value="1">
-                            </label>
-                            <label for="PCIe4.0">
-                                PCIe 4.0
-                                <input type="checkbox" name="motherboardPCIe4.0" id="PCIe4.0" value="1">
-                            </label>
-                            <label for="ITX">
-                                ITX
-                                <input type="checkbox" name="motherboardITX" id="ITX" value="1">
-                            </label>
-                            <label for="DDR5">
-                                DDR5
-                                <input type="checkbox" name="motherboardDDR5" id="DDR5" value="1">
-                            </label>
-                            <label for="USB-C">
-                                USB-C
-                                <input type="checkbox" name="motherboardUSBC" id="USB-C" value="1">
-                            </label>
-                        </fieldset>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Case</legend>
-                        <label for="caseColor">
-                            Color
-                            <input type="color" name="caseColor" id="caseColor">
-                        </label>
-                        <fieldset>
-                            <legend>I/O</legend>
-                            <label for="USB3">
-                                USB 3.0
-                                <input type="checkbox" name="USB3" id="USB3">
-                            </label>
-                            <label for="USBC">
-                                USB-C
-                                <input type="checkbox" name="USBC" id="USBC">
-                            </label>
-                            <label for="jack3mm">
-                                Jack 3.0mm
-                                <input type="checkbox" name="jack3mm" id="jack3mm">
-                            </label>
-                            <label for="dvd">
-                                DVD
-                                <input type="checkbox" name="dvd" id="dvd">
-                            </label>
-                        </fieldset>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Additional devices</legend>
-                        <label for="keyboard">
-                            Keyboard
-                            <input type="checkbox" name="keyboard" id="keyboard" value="1">
-                        </label>
-                        <label for="mouse">
-                            Mouse
-                            <input type="checkbox" name="mouse" id="mouse" value="1">
-                        </label>
-                        <label for="printer">
-                            Printer
-                            <input type="checkbox" name="printer" id="printer" value="1">
-                        </label>
-                        <label for="display">
-                            Display
-                            <input type="checkbox" name="display" id="display" value="1">
-                        </label>
-                        <label for="speakers">
-                            Speakers
-                            <input type="checkbox" name="speakers" id="speakers" value="1">
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <!-- TODO: Add Comments -->
-                <div class="buttons">
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </div>
+              <legend>Features</legend>
+              <label for="Wi-Fi">
+                Wi-Fi
+                <input type="checkbox" name="motherboardWifi" id="Wi-Fi" value="1">
+              </label>
+              <label for="Bluetooth">
+                Bluetooth
+                <input type="checkbox" name="motherboardBluetooth" id="Bluetooth" value="1">
+              </label>
+              <label for="PCIe4.0">
+                PCIe 4.0
+                <input type="checkbox" name="motherboardPCIe4.0" id="PCIe4.0" value="1">
+              </label>
+              <label for="ITX">
+                ITX
+                <input type="checkbox" name="motherboardITX" id="ITX" value="1">
+              </label>
+              <label for="DDR5">
+                DDR5
+                <input type="checkbox" name="motherboardDDR5" id="DDR5" value="1">
+              </label>
+              <label for="USB-C">
+                USB-C
+                <input type="checkbox" name="motherboardUSBC" id="USB-C" value="1">
+              </label>
             </fieldset>
-        </form>
-    </div>
+          </fieldset>
+          <fieldset>
+            <legend>Case</legend>
+            <label for="caseColor">
+              Color
+              <input type="color" name="caseColor" id="caseColor">
+            </label>
+            <fieldset>
+              <legend>I/O</legend>
+              <label for="USB3">
+                USB 3.0
+                <input type="checkbox" name="USB3" id="USB3">
+              </label>
+              <label for="USBC">
+                USB-C
+                <input type="checkbox" name="USBC" id="USBC">
+              </label>
+              <label for="jack3mm">
+                Jack 3.0mm
+                <input type="checkbox" name="jack3mm" id="jack3mm">
+              </label>
+              <label for="dvd">
+                DVD
+                <input type="checkbox" name="dvd" id="dvd">
+              </label>
+            </fieldset>
+          </fieldset>
+          <fieldset>
+            <legend>Additional devices</legend>
+            <label for="keyboard">
+              Keyboard
+              <input type="checkbox" name="keyboard" id="keyboard" value="1">
+            </label>
+            <label for="mouse">
+              Mouse
+              <input type="checkbox" name="mouse" id="mouse" value="1">
+            </label>
+            <label for="printer">
+              Printer
+              <input type="checkbox" name="printer" id="printer" value="1">
+            </label>
+            <label for="display">
+              Display
+              <input type="checkbox" name="display" id="display" value="1">
+            </label>
+            <label for="speakers">
+              Speakers
+              <input type="checkbox" name="speakers" id="speakers" value="1">
+            </label>
+          </fieldset>
+        </fieldset>
+        <!-- TODO: Add Comments -->
+        <div class="buttons">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </body>
+
 </html>
